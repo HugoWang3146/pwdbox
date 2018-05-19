@@ -1,4 +1,4 @@
-package Config;
+package config;
 
 public final class PwdConfig {
     private static PwdConfig config;

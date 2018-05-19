@@ -43,6 +43,7 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.0.2</version>
                 <configuration>
+                    <finalName>pwdbox</finalName>
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
@@ -53,5 +54,10 @@
             </plugin>
         </plugins>
     </build>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
 
 </project>
