@@ -1,9 +1,5 @@
 package service;
 
-import java.io.FileInputStream;
-import java.io.FileReader;
-import java.io.InputStream;
-
 import config.PwdConfig;
 import util.CryptoInterface;
 import util.IOUtil;
@@ -22,6 +18,7 @@ public class CryptoService {
             writeFile(PwdConfig.getEncryptedFile(), encryptedContent);
         } catch (Exception e) {
             e.printStackTrace();
+            IOUtil.PRINT("Encrypt file failed");
         }
     }
 
@@ -32,6 +29,7 @@ public class CryptoService {
             writeFile(PwdConfig.getDecryptedFile(), decryptedContent);
         } catch (Exception e) {
             e.printStackTrace();
+            IOUtil.PRINT("Decrypt file failed");
         }
     }
 
@@ -42,6 +40,7 @@ public class CryptoService {
             return new String(decryptedContent);
         } catch (Exception e) {
             e.printStackTrace();
+            IOUtil.PRINT("Decrypt file failed");
         }
         return null;
     }

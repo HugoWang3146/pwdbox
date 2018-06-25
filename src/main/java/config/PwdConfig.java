@@ -4,6 +4,16 @@ import java.io.File;
 
 public class PwdConfig {
 
+    private static String mainPassword="InitialKeyValue0";
+
+    public static String getMainPassword() {
+        return mainPassword;
+    }
+
+    public static void setMainPassword(String mainPassword) {
+        PwdConfig.mainPassword = mainPassword;
+    }
+
     public static String getCryptoFilePath() {
         return NestedConfig.cryptoFilePath;
     }
@@ -21,9 +31,8 @@ public class PwdConfig {
     }
 
     private static class NestedConfig {
-        //        private static String cryptoFilePath = System.getProperty("usr.dir");
-        private static String cryptoFilePath = "D:\\";
-        private static String originFile = cryptoFilePath + File.separator + "template.json";
+        private static String cryptoFilePath = System.getProperty("user.dir");
+        private static String originFile = cryptoFilePath + File.separator + "origin.json";
         private static String encryptedFile = cryptoFilePath + File.separator + "encrypted";
         private static String decryptedFile = cryptoFilePath + File.separator + "decrypted.json";
     }
